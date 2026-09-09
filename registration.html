@@ -4,108 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-            width: 350px;
-        }
-
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        .gender {
-            margin: 10px 0;
-        }
-
-        .gender input {
-            width: auto;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            background: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background: #0056b3;
-        }
-    </style>
 </head>
-
 <body>
 
-<div class="container">
     <h2>Registration Form</h2>
 
     <form action="#" method="post">
 
-        <input type="text" name="fullname" placeholder="Full Name" required>
-
-        <input type="email" name="email" placeholder="Email Address" required>
-
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-
-        <input type="password" name="password" placeholder="Password" required>
-
-        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-
-        <select name="country" required>
-            <option value="">Select Country</option>
-            <option>India</option>
-            <option>USA</option>
-            <option>Canada</option>
-            <option>Australia</option>
-            <option>United Kingdom</option>
-        </select>
-
-        <div class="gender">
-            <label><strong>Gender:</strong></label><br>
-            <input type="radio" name="gender" value="Male" required> Male
-            <input type="radio" name="gender" value="Female"> Female
-            <input type="radio" name="gender" value="Other"> Other
-        </div>
-
-        <label>
-            <input type="checkbox" required>
-            I agree to the Terms & Conditions
-        </label>
-
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
         <br><br>
 
-        <button type="submit">Register</button>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label>
+        <br><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="">Select Country</option>
+            <option value="india">India</option>
+            <option value="usa">USA</option>
+            <option value="uk">United Kingdom</option>
+            <option value="canada">Canada</option>
+            <option value="australia">Australia</option>
+        </select>
+        <br><br>
+
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the Terms and Conditions</label>
+        <br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
 
     </form>
-</div>
 
 </body>
 </html>
